@@ -14,13 +14,13 @@ class Chart extends StatelessWidget {
         Duration(days: index),
       );
 
-      int totalSum;
+      int totalSum = 0;
       for (var i = 0; i < recentTransactions.length; i++) {
         print(recentTransactions[i].amount);
         if (recentTransactions[i].date.day == weekDay.day &&
             recentTransactions[i].date.month == weekDay.month &&
             recentTransactions[i].date.year == weekDay.year) {
-          totalSum += 1;
+          totalSum += recentTransactions[i].amount;
         }
       }
 
