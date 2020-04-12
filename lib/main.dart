@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }).toList();
   }
 
-  void _addNewTransaction(String title, int amount) {
+  void _addNewTransaction(String title, double amount) {
     final newTransaction = Transaction(
       title: title,
       amount: amount,
@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    //print(_recentTransactions);
+    //prdouble(_recentTransactions);
     return Scaffold(
       appBar: AppBar(
         title: Text(

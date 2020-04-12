@@ -16,7 +16,7 @@ class _NewTransactionState extends State<NewTransaction> {
 
   void submitData() {
     final enteredTitle = titleController.text;
-    final enteredAmount = int.parse(amountController.text);
+    final enteredAmount = double.parse(amountController.text);
 
     if (enteredTitle.isEmpty || enteredAmount <= 0) {
       return;
@@ -24,7 +24,7 @@ class _NewTransactionState extends State<NewTransaction> {
 
     widget.addTx(
       titleController.text,
-      int.parse(amountController.text),
+      double.parse(amountController.text),
     );
 
     Navigator.of(context).pop();

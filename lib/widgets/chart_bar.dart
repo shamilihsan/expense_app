@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Chartbar extends StatelessWidget {
   final String label;
-  final int spendingAmount;
+  final double spendingAmount;
   final double spendingPctofTotal;
 
   Chartbar(this.label, this.spendingAmount, this.spendingPctofTotal);
@@ -26,7 +26,14 @@ class Chartbar extends StatelessWidget {
                   border: Border.all(color: Colors.grey, width: 1.0),
                   color: Color.fromRGBO(220, 220, 220, 1),
                 ),
-                
+              ),
+              FractionallySizedBox(
+                heightFactor: spendingPctofTotal,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: BorderRadius.circular(10)),
+                ),
               )
             ],
           ),
