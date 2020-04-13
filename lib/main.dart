@@ -118,14 +118,16 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
-                height: (MediaQuery.of(context).size.height * 0.4) -
-                    appbar.preferredSize.height -
-                    MediaQuery.of(context).padding.top,
+                height: (MediaQuery.of(context).size.height -
+                        appbar.preferredSize.height -
+                        MediaQuery.of(context).padding.top) *
+                    0.3,
                 child: Chart(_recentTransactions)),
             Container(
-                height: (MediaQuery.of(context).size.height * 0.6) -
-                    appbar.preferredSize.height -
-                    MediaQuery.of(context).padding.top,
+                height: (MediaQuery.of(context).size.height -
+                        appbar.preferredSize.height -
+                        MediaQuery.of(context).padding.top) *
+                    0.7,
                 child: TransactionList(_usertransactions, _deleteTransaction)),
           ],
         ),
